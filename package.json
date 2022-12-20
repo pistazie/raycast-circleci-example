@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"all good\""
+    "test": "if [ $((1 + RANDOM % 5)) -gt 4 ]; then echo \"flakkky test\"; fi"
   },
   "repository": {
     "type": "git",
