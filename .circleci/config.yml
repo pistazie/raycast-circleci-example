@@ -48,3 +48,13 @@ workflows:
       - build
       - test
       - pest
+  eric_and_benz:
+    jobs:
+      - build
+      - test
+      - pest
+  peace_and_love:
+    jobs:
+      - build
+      - test
+      - pest
