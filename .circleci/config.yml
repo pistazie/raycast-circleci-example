@@ -1,0 +1,23 @@
+version: 2.1
+
+# Define the jobs we want to run for this project
+jobs:
+  build:
+    docker:
+      - image: cimg/node:18.12.1
+    steps:
+      - checkout
+      - run: npm run test
+  test:
+    docker:
+      - image: cimg/node:18.12.1
+    steps:
+      - checkout
+      - run: npm run test
+
+# Orchestrate our job run sequence
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test
